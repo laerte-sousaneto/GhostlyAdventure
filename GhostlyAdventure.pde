@@ -5,6 +5,11 @@ Background background;
 final int screenWidth = 800;
 final int screenHeight = 800;
 
+boolean keyHeld = false;
+int currentKeyPressed = 0;
+final int leftKeyIndex = 37;
+final int rightKeyIndex = 39;
+   
 void setup()
 {
   size(screenWidth, screenHeight);
@@ -23,6 +28,15 @@ void draw()
   {
     background.startAnimation();
     gameState.refresh();
+    
+    if(currentKeyPressed == leftKeyIndex)
+    {
+      if(gameState.user.x > 0) gameState.user.x -= gameState.user.speed;
+    }
+    else if(currentKeyPressed == rightKeyIndex)
+    {
+      if(gameState.user.x < (screenWidth - gameState.user.frameWidth)) gameState.user.x += gameState.user.speed;
+    }
   }
   else if(gameState.showStartMenu && !gameState.userLost)
   {
@@ -39,18 +53,12 @@ void draw()
 
 void keyPressed()
 {
-   final int leftKeyIndex = 37;
-   final int rightKeyIndex = 39;
-   
-   switch(keyCode)
-   {
-     case leftKeyIndex:
-       if(gameState.user.x > 0) gameState.user.x -= gameState.user.speed;
-       break;
-     case rightKeyIndex:
-       if(gameState.user.x < (screenWidth - gameState.user.frameWidth)) gameState.user.x += gameState.user.speed;
-       break;     
-   }
+   currentKeyPressed = keyCode;
+}
+
+void keyReleased()
+{
+   currentKeyPressed = 0; 
 }
 
 void mousePressed()

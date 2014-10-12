@@ -29,7 +29,7 @@ class CollisionDetector
      boolean wasHit = false;
      
      if((enemy.y >= (user.y - (user.frameHeight-10)) && enemy.y < (user.y)) 
-         && (enemy.x >= (user.x-20) && enemy.x < (user.x + (user.frameWidth-10))))
+         && (enemy.x >= (user.x-20) && enemy.x < (user.x + (user.frameWidth))))
      {
        wasHit = true;
      }            
