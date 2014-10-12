@@ -3,7 +3,7 @@ class UserFrame extends CharacterFrame
     UserFrame()
     {
       super("images/ghost.png");
-      super.speed = 2;
+      super.speed = 4;
     }
 }
 

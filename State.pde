@@ -58,4 +58,12 @@ class GameState
     }
   }
   
+  void startGame()
+  {
+     gameState.restart();
+     gameState.userLost = false;
+     gameState.isRunning = true;
+     gameState.showStartMenu = false; 
+  }
+  
 }

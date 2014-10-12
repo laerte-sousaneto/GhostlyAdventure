@@ -9,6 +9,7 @@ boolean keyHeld = false;
 int currentKeyPressed = 0;
 final int leftKeyIndex = 37;
 final int rightKeyIndex = 39;
+final int enterKeyIndex = 10;
    
 void setup()
 {
@@ -42,12 +43,14 @@ void draw()
   {
     background.loadMainScreen();
     startBtn.display(); 
+    if(currentKeyPressed == enterKeyIndex) gameState.startGame();
   }
   else if(gameState.userLost)
   {
     startBtn.text = "Restart";
     startBtn.textX = (startBtn.btnWidth/2) + startBtn.x - 40;
     startBtn.display(); 
+    if(currentKeyPressed == enterKeyIndex) gameState.startGame();
   }
 }
 
@@ -67,15 +70,13 @@ void mousePressed()
   { 
     if(gameState.userLost)
     {
-       gameState.restart();
-       gameState.userLost = false;
-       gameState.isRunning = true;
-       gameState.showStartMenu = false;
+       gameState.startGame();
     }
     else
     {
-      gameState.showStartMenu = false;
-      gameState.isRunning = true;  
+      gameState.startGame();
     }     
   }
 }
+
+

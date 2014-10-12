@@ -29,7 +29,7 @@ class CollisionDetector
      boolean wasHit = false;
      
      if((enemy.y >= (user.y - (user.frameHeight-10)) && enemy.y < (user.y)) 
-         && (enemy.x >= (user.x-20) && enemy.x < (user.x + (user.frameWidth))))
+         && (enemy.x >= (user.x-25) && enemy.x < (user.x + (user.frameWidth-20))))
      {
        wasHit = true;
      }            
@@ -70,7 +70,7 @@ class EnemyWave
      for(int i = 0; i < numberOfEnemies; i++)
      {
        int randomImageIndex = (int)random(imgURL.length);
-       enemies[i] = new EnemyFrame(imgURL[randomImageIndex], 3);
+       enemies[i] = new EnemyFrame(imgURL[randomImageIndex], 2);
        enemies[i].displayAtTheTop(screenWidth, screenHeight);
        enemies[i].x = position;         
  
