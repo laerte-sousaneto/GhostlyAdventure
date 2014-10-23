@@ -1,3 +1,10 @@
+/*
+  Author: Laerte Sousa Neto
+  Email: sousa.lae@gmail.com
+
+  GameState object is used to keep track of game configuration and status
+  such as level, quantity of enemies, and running state. 
+*/
 class GameState
 {
   int level;

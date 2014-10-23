@@ -1,3 +1,10 @@
+/*
+  Author: Laerte Sousa Neto
+  Email: sousa.lae@gmail.com
+
+  UserFrame inherits functionality from CharacterFrame.
+  Its purpose is to define and add functionality to the user/player. 
+*/
 class UserFrame extends CharacterFrame
 {
     UserFrame()
@@ -7,6 +14,13 @@ class UserFrame extends CharacterFrame
     }
 }
 
+/*
+  Author: Laerte Sousa Neto
+  Email: sousa.lae@gmail.com
+
+  EnemyFrame inherits functionality from CharacterFrame.
+  Its purpose is to define and add functionality to an enemy.
+*/
 class EnemyFrame extends CharacterFrame
 {
   EnemyFrame()
@@ -36,6 +50,12 @@ class EnemyFrame extends CharacterFrame
   }
 }
 
+/*
+  Author: Laerte Sousa Neto
+  Email: sousa.lae@gmail.com
+
+  CharacterFrame is the base object for both enemy and user characters. 
+*/
 class CharacterFrame
 {
   final String IMG_URL; 

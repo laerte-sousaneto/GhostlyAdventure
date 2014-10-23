@@ -1,3 +1,12 @@
+/*
+  Author: Laerte Sousa Neto
+  Email: sousa.lae@gmail.com
+
+  CollisionDetector Object is meant to be used in order to check for
+  contact made between Enemies and User character frames.
+  
+  In order to use this class, you need to pass in a UserFrame and EnemyWave object.
+*/
 class CollisionDetector
 {
    UserFrame user;
@@ -38,6 +47,15 @@ class CollisionDetector
    }  
 }
 
+
+/*
+  Author: Laerte Sousa Neto
+  Email: sousa.lae@gmail.com
+
+  EnemyWave object is used manipulate all enemies on the game, as well keeping them in sync with each other.
+  
+  It needs the width and height of the screen in order to work. 
+*/
 class EnemyWave
 {
    final String imgURL[] = new String[]{"images/pumpkin1.png", "images/pumpkin2.png", "images/pumpkin3.png", "images/pumpkin4.png", "images/pumpkin5.png"};

@@ -1,3 +1,9 @@
+/*
+  Author: Laerte Sousa Neto
+  Email: sousa.lae@gmail.com
+
+  GameAlert object is used to propmt user about certain warning or stages of the game. 
+*/
 class GameAlert
 {
   final int screenWidth;
@@ -27,6 +33,13 @@ class GameAlert
   } 
 }
 
+/*
+  Author: Laerte Sousa Neto
+  Email: sousa.lae@gmail.com
+
+  ButtonGUI object is used t mimic a Button look and feel.
+   
+*/
 class ButtonGUI
 {  
   int btnWidth;
@@ -55,7 +68,7 @@ class ButtonGUI
     
     this.text = text;
     this.textSize = 25;
-    this.textX = x + (btnWidth/2)-this.textSize;
+    this.textX = x + (btnWidth/2)-this.textSize-70;
     this.textY = y + (btnHeight/2)+this.textSize/3;
     
     image = loadImage(imgURL);
@@ -90,6 +103,12 @@ class ButtonGUI
   }
 }
 
+/*
+  Author: Laerte Sousa Neto
+  Email: sousa.lae@gmail.com
+
+  Background object handles, all background animations. 
+*/
 class Background
 {
   String title = "Ghostly Adventure";
@@ -105,6 +124,8 @@ class Background
     mainBackground = loadImage("images/main_background.jpg");
     oceanAnimationColor = (int)random(255);
   } 
+  
+  // Animation from Processing.org
   void startAnimation()
   {  
     oceanAnimationColor+=2;
@@ -136,6 +157,7 @@ class Background
     vertex(0, height);
     endShape(CLOSE);
   }
+  
   
   void loadMainScreen()
   {
